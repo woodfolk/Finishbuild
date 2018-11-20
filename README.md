@@ -58,7 +58,7 @@ sound-juicer - GNOME CD Ripper
 vlc - multimedia player and streamer
 xine - an X11 based GUI for the libxine video player library
 
-Other:
+Others
 ---------------------------------------------------------------------------------
 GTK+ based volume control tool (mixer) for the PulseAudio sound server
 GStreamer Multimedia-Codecs
@@ -97,9 +97,9 @@ Wicd - Wicd Network Manager is a general-purpose network configuration server wh
 Wireshark - (network \ sniffer) that captures and analyzes packets off the wire
 XChat -IRC client for X similar to AmIRC
 Zenmap - a Nmap frontend
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-               ****** Other ******
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Others
+---------------------------------------------------------------------------------
 Google Chrome - The web browser from Google
 Skype - client for Skype VOIP and instant messaging service 
 Synology Assistant- Synology Assistant
