@@ -57,9 +57,9 @@ sound-juicer - GNOME CD Ripper
 *Videos (Totem) - Simple media player for the GNOME desktop based on GStreamer
 vlc - multimedia player and streamer
 xine - an X11 based GUI for the libxine video player library
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-               ****** Other ******
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Other:
+---------------------------------------------------------------------------------
 GTK+ based volume control tool (mixer) for the PulseAudio sound server
 GStreamer Multimedia-Codecs
 xmms2 - Client/server based media player system
