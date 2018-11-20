@@ -213,7 +213,7 @@ VirtualBox - a free x86 virtualization solution allowing a wide range of x86 ope
 ---------------------------------------------------------------------------------
             ****** Miscellaneous ******                   
 ---------------------------------------------------------------------------------
-CHIRP -  a free, open-source tool for programming your amateur radio. http://chirp.danplanet.com/projects/chirp/wiki/Download
+CHIRP -  a free, open-source tool for programming your amateur radio. 
 Clam AV - anti-virus utility for Unix - command-line interface 
 Dropbox - sync files between computers
 Etcher - Flash OS images to SD cards & USB drives, safely and easily 
