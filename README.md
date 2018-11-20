@@ -58,7 +58,6 @@ sound-juicer - GNOME CD Ripper
 vlc - multimedia player and streamer
 xine - an X11 based GUI for the libxine video player library
 
-Others
 ---------------------------------------------------------------------------------
 GTK+ based volume control tool (mixer) for the PulseAudio sound server
 GStreamer Multimedia-Codecs
@@ -98,7 +97,6 @@ Wireshark - (network \ sniffer) that captures and analyzes packets off the wire
 XChat -IRC client for X similar to AmIRC
 Zenmap - a Nmap frontend
 
-Others
 ---------------------------------------------------------------------------------
 Google Chrome - The web browser from Google
 Skype - client for Skype VOIP and instant messaging service 
