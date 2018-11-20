@@ -130,5 +130,116 @@ GNOME Mahjongg - a solitaire version of the classic Eastern tile game
 GNOME Mines - a puzzle game where you search for hidden mines
 GNOME Sudoku - a popular Japanese logic game
 
+---------------------------------------------------------------------------------
+            ****** Graphics and Photography (GRAPHICS) ******                    
+---------------------------------------------------------------------------------
+Blender - an integrated 3d suite for modelling, animation, rendering, post-production, interactive creation and playback (games)
+*calibre - E-book Viewer - Read e-books in over a dozen different formats
+Darktable - manages your digital negatives in a database and lets you view them through a lighttable.
+Dia - an editor for diagrams, graphs, charts etc
+*Document Viewer - Evince - is a simple multi-page document viewer
+GNU Image Manipulation Program - 
+Gpick - an application that allows you to sample any color from anywhere on the desktop, and use it to create palettes (i.e. collections of colors) for use in graphic design applications
+Inkscape - an illustration editor which has everything needed to create professional quality computer art
+Krita -  Digital Painting, Creative Freedom full-featured digital art studio
+LibreCAD - an application for computer aided design (CAD) in two dimensions (2D)
+*LibraOffice Draw - an easy-to-use graphics editor, which empowers you to create anything from quick sketches to complex diagrams
+LRF Viewer - Viewer for LRF files (SONY ebook format files)
+Scribus -  a desktop publishing application that allows you to create posters, magazines and books ready to send off to a printing house
+*Shotwell - an easy-to-use, fast photo organizer designed for the GNOME desktop
+Simple Scan - Scan Documents
+Sweet Home3D - 3D is an interior design Java application for quickly choosing and placing furniture on a house 2D plan drawn by the end-user, with a 3D preview.
 
+---------------------------------------------------------------------------------
+            ****** Add-ons ******                               
+---------------------------------------------------------------------------------
+GStreamer Multimedia Codecs - GStreamer plugins from the \ugly\ set
+GStreamer Multimedia Codecs - libav plugin for GStreamer
+GStreamer Multimedia Codecs - GStreamer plugin for GTK+3
+GStreamer Multimedia Codecs - GStreamer plugins from the \good\ set
+GStreamer Multimedia Codecs - GStreamer plugins for X11 and Pango
+GStreamer Multimedia Codecs - GStreamer plugin for PulseAudio
+GStreamer Multimedia Codecs - GStreamer plugins for GL
+GStreamer Multimedia Codecs - GStreamer plugins from the \base\ set
+GStreamer Multimedia Codecs - GStreamer plugin for ALSA
+GStreamer Multimedia Codecs - 
+
+---------------------------------------------------------------------------------
+            ****** Developer Tools (PROGRAMMING) ******                          
+---------------------------------------------------------------------------------
+Anjuta DevStudio - a versatile software development studio featuring a number of advanced programming facilities including project management, application wizard, interactive debugger, source editor, version control, GUI designer, profiler and many more tools
+Arduino IDE - an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software. It's intended for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments
+Bluefish Editor - a powerful editor targeted towards programmers and web developers, with many options to write websites, scripts and programming code.
+Eeschema - Eeschema (Kicad) is a suite of programs for the creation of printed circuit boards
+GNU Radio Companion - Software Defined Radio (SDR) GUI for programming the GNU Radio toolkit
+Kicad is made up of 5 main components: kicad - project manager, eeschema - schematic editor, pcbnew - PCB editor, gerbview - GERBER viewer, cvpcb - footprint selector for components
++Libraries:
+    Both eeschema and pcbnew have library managers and editors for their components 
+    and footprints. You can easily create, edit, delete and exchange library items.
+    Documentation files can be associated with components, footprints and key words, 
+    allowing a fast search by function. Very large libraries are available for 
+    schematic components and footprints. Most components have corresponding 3D models.
+Fritzing - an open source project designed to help one transition from a prototype to a finished project
+Geany - a small, fast and lightweight integrated development environment (IDE) using GTK+
+Visual Studio Code - a new choice of tool that combines the simplicity of a code editor with what developers need for the core edit-build-debug cycle
+
+---------------------------------------------------------------------------------
+            ****** Education and Science (Education/Science) ******              
+---------------------------------------------------------------------------------
+LibreOffice Math - an equation editor component for LibreOffice
+Stellarium - Desktop Planetarium renders 3D photo-realistic skies in real time with OpenGL
+
+---------------------------------------------------------------------------------
+            ****** Utilities (System Tools/Accessories) ******                   
+---------------------------------------------------------------------------------
+ConvertAll - convert any unit in the large database to any other compatible unit
+*Backup - Déjà Dup Backup Tool -  a simple backup tool
+*File Roller - Engrampa Archive Manager (also known as File Roller) is the default GNOME application for opening, creating, and modifying archive and compressed archivefiles.
+Gip IP Address Calculator - tools for IP address based calculations
+Gnome Boxes - Simple GNOME app to access remote or virtual systems
+*GNOME Disks - Disks - provides an easy way to inspect, format, partition, and configure disks and block devices
+KeePassXC - an application for people with extremely high demands on secure personal data management
+Network Tools - GNOME Nettool is a network information tool which provides user interfaces for some of the most common command line network tools including:  ifconfig, ping, netstat, traceroute, port scanning, DNS lookup, finger, whois
+PuTTY Terminal Emulator - an X terminal emulator based on the popular Windows SSH client, PuTTY
+Redshift - adjusts the color temperature of your screen according to your surroundings 
+*Seahore - a GNOME application for managing encryption keys
+SiriKali - a Qt/C++ GUI front end to cryfs,gocryptfs,securefs and encfs, allowing the user to create, mount, and unmount encrypted volumes
+Terminator - Multiple terminals in one window
+Tilda - a highly-configurable drop-down terminal emulator
+*GNOME To Do - a task management application designed to integrate with GNOME
+UPnP Router Control - allows one to see some parameters of the router like: the network speed, the external IP and the model name
+*Vim - Vim - an almost compatible version of the UNIX editor Vi
++Visual Studio Code - a new choice of tool that combines the simplicity of a code editor with what developers need for the core edit-build-debug cycle
+VirtualBox - a free x86 virtualization solution allowing a wide range of x86 operating systems such as Windows, DOS, BSD or Linux to run on a Linux system
+
+---------------------------------------------------------------------------------
+            ****** Miscellaneous ******                   
+---------------------------------------------------------------------------------
+CHIRP -  a free, open-source tool for programming your amateur radio. http://chirp.danplanet.com/projects/chirp/wiki/Download
+Clam AV - anti-virus utility for Unix - command-line interface 
+Dropbox - sync files between computers
+Etcher - Flash OS images to SD cards & USB drives, safely and easily 
+Git - fast, scalable, distributed revision control system
+gitkraken - Git client should integrate with your Git hosting service
+gpa - GNU Privacy Guard, a free-software replacement for Symantec's PGP cryptographic software suite
+gparted - GNOME partition editor
+grsync -  a simple graphical interface using GTK2 for the rsync command line program
+gufw Firewall - graphical user interface for ufw
+ImageMagick - image manipulation programs
+MeduLibre - an advanced menu editor that provides modern features
+NTFS-3G - Read/Write NTFS Support
+NTFS Configuration Tool - allow you to easily configure all of your NTFS devices to allow write support via a friendly gui
+OpenConnect - VPN client that utilizes TLS and DTLS for secure session establishment and is compatible with the CISCO AnyConnect SSL VPN protocol
+PowerShell - an automation and configuration management platform. It consists of a cross-platform (Windows, Linux, and macOS) command-line shell and associated scripting language
+rar - Archiver for .rar files
+unrar - Unarchiver for .rar files (non-free version)
+Stacer - 
+ttf-mscorefonts-installer - Installer for Microsoft TrueType core fonts
+UNetbootin - allows for the installation of various Linux/BSD distributions to a partition or USB drive
+VeraCrypt - a free and open-source utility used for on-the-fly encryption
+xrdp - An open source remote desktop protocol(rdp) server
+zip - Archiver for .zip files
+unzip - De-archiver for .zip files 
+ubuntu-restricted-extras - Commonly used restricted packages for Ubuntu
+libavcodec-extra - FFmpeg codec library (additional codecs meta-package)
 
