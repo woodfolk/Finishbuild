@@ -21,10 +21,8 @@
 #---------------------------------------------------------------------------------#
 # varibles
     NOW=`date +%Y%m%d%H%M%S`                    # Current Date & Time Suffix
-    # LOGFILE=/var/log/instlog$NOW.log          # Script Log File
-    # ERRORFILE=/var/log/errlog$NOW.log         # Error Log File
-    LOGFILE=instlog$NOW.log                     # Script Log File
-    ERRORFILE=errlog$NOW.log                    # Error Log File
+    LOGFILE=/var/log/instlog$NOW.log         	# Script Log File
+    ERRORFILE=/var/log/errlog$NOW.log         	# Error Log File
     OSTYPE="Default"                            # Default OS Ubuntu
     DIST="UNKNOWN"										# Distrobution
     VER="UNKNOWN"											# Version
@@ -215,17 +213,17 @@ funcPackMans () {
         echo ""    																	# clear Screen
         echo "...installing Package Management Tools"
         sudo apt update
-        sudo apt install -ys synaptic gdebi snapd flatpak gnome-software-plugin-flatpak
+        sudo apt install -y synaptic gdebi snapd flatpak gnome-software-plugin-flatpak
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     else
         echo ""
         clear
         echo ""    																	# clear Screen
         echo "Intalling Parrot Package Manager"								# For Furture Use
-        sudo apt-get install -ys synaptic gdebi snapd flatpak
+        sudo apt-get install -y synaptic gdebi snapd flatpak
         sudo add-apt-repository ppa:alexlarsson/flatpak
         sudo apt update
-        sudo apt install -ys synaptic gdebi snapd flatpak gnome-software-plugin-flatpak
+        sudo apt install -y synaptic gdebi snapd flatpak gnome-software-plugin-flatpak
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     fi
 #---------------------------------------------------------------------------------#
@@ -254,10 +252,10 @@ funcAudioVideo () {
         clear
         echo ""    																	# clear Screen
         echo "...installing AuDIO & Video Applications"
-        sudo apt-get install -ys audacity cheese dvdrip easytag gtkpod handbrake kazam kino
-        sudo apt-get install -ys mplayer mplayer-gui mplayer-skins obs-studio openshot
-        sudo apt-get install -ys simplescreenrecorder smplayer smplayer-themes sound-juicer
-        sudo apt-get install -ys xmms2-plugin-all libdvdcss2 libavcodec-extra
+        sudo apt-get install -y audacity cheese dvdrip easytag gtkpod handbrake kazam kino
+        sudo apt-get install -y mplayer mplayer-gui mplayer-skins obs-studio openshot
+        sudo apt-get install -y simplescreenrecorder smplayer smplayer-themes sound-juicer
+        sudo apt-get install -y xmms2-plugin-all libdvdcss2 libavcodec-extra
     else
         echo ""
         clear
@@ -288,21 +286,21 @@ funcCommNetwork () {
         clear
         echo ""    																	# clear Screen
         echo "..installing Communications, Internet and Networking Applications..."
-        sudo apt-get install -ys etherape etherape-data filezilla hexchat liferea 
-        sudo apt-get install -ys pidgin putty putty-doc putty-tools pterm
-        sudo apt-get install -ys remmina remmina-common remmina-plugin-rdp 
-        sudo apt-get install -ys remmina-plugin-secret remmina-plugin-vnc  
-        sudo apt-get install -ys remmina-plugin-exec remmina-plugin-nx  
-        sudo apt-get install -ys remmina-plugin-spice remmina-plugin-telepathy  
-        sudo apt-get install -ys remmina-plugin-xdmcp libfreerdp-plugins-standard 
-        sudo apt-get install -ys telegram-desktop vinagre wicd wireshark xchat zenmap
+        sudo apt-get install -y etherape etherape-data filezilla hexchat liferea 
+        sudo apt-get install -y pidgin putty putty-doc putty-tools pterm
+        sudo apt-get install -y remmina remmina-common remmina-plugin-rdp 
+        sudo apt-get install -y remmina-plugin-secret remmina-plugin-vnc  
+        sudo apt-get install -y remmina-plugin-exec remmina-plugin-nx  
+        sudo apt-get install -y remmina-plugin-spice remmina-plugin-telepathy  
+        sudo apt-get install -y remmina-plugin-xdmcp libfreerdp-plugins-standard 
+        sudo apt-get install -y telegram-desktop vinagre wicd wireshark xchat zenmap
         echo ""
         clear
         echo ""    																	# clear Screen
         echo "  ********* Removing the following packages *********"
         echo "    network-manager-gnome" 
         echo "    network-manager"
-		  sudo apt-get remove -ys network-manager-gnome network-manager 
+		  sudo apt-get remove -y network-manager-gnome network-manager 
     else
         echo ""
         clear
@@ -328,8 +326,8 @@ funcProductivity () {
         clear
         echo ""
         echo "..installing Office and Productivity Applications..."
-        sudo apt-get install -ys calibre glabels gnucash gnucash-doc gramps homebank
-        sudo apt-get install -ys homebank libreoffice   
+        sudo apt-get install -y calibre glabels gnucash gnucash-doc gramps homebank
+        sudo apt-get install -y homebank libreoffice   
     else
         echo ""
         clear
@@ -358,7 +356,7 @@ funcGames () {
         clear
         echo ""
         echo "..installing Games..."
-        sudo apt-get install -ys gnome-mahjongg gnome-mines gnome-sudoku
+        sudo apt-get install -y gnome-mahjongg gnome-mines gnome-sudoku
     else
         echo ""
         clear
@@ -382,12 +380,12 @@ funcGraphics () {
         clear
         echo ""
         echo "..installing Graphics and Photography Applications..."
-        sudo apt-get install -ys blender darktable dia gimp gimp-cbmplugs gimp-data-extras
-        sudo apt-get install -ys gimp-dcraw gimp-dds gimp-gap gimp-gluas gimp-gmic
-        sudo apt-get install -ys gimp-gutenprint gimp-help-en gimp-lensfun gimp-normalmap
-        sudo apt-get install -ys gimp-plugin-registry gimp-texturize gimp-ufraw gpick
-        sudo apt-get install -ys inkscape inkscape-open-symbols krita librecad scribus
-        sudo apt-get install -ys scribus-doc scribus-template sweethome3d
+        sudo apt-get install -y blender darktable dia gimp gimp-cbmplugs gimp-data-extras
+        sudo apt-get install -y gimp-dcraw gimp-dds gimp-gap gimp-gluas gimp-gmic
+        sudo apt-get install -y gimp-gutenprint gimp-help-en gimp-lensfun gimp-normalmap
+        sudo apt-get install -y gimp-plugin-registry gimp-texturize gimp-ufraw gpick
+        sudo apt-get install -y inkscape inkscape-open-symbols krita librecad scribus
+        sudo apt-get install -y scribus-doc scribus-template sweethome3d
     else
         echo ""
         clear
@@ -416,25 +414,25 @@ funcAddOns () {
         clear
         echo ""
         echo "..installing GStreamer plugins and libraries..."
-        sudo apt-get install -ys libgstreamer1.0-0 						# GStreamer library
-        sudo apt-get install -ys gstreamer1.0-plugins-base				# GStreamer plugins from the "base" set
-        sudo apt-get install -ys gstreamer1.0-plugins-good				# GStreamer plugins from the "good" set
-        sudo apt-get install -ys gstreamer1.0-plugins-bad		   	# GStreamer plugins from the "bad" set
-        sudo apt-get install -ys gstreamer1.0-plugins-ugly				# GStreamer plugins from the "ugly" set
-        sudo apt-get install -ys gstreamer1.0-libav						# libav plugin for GStreamer"
-        sudo apt-get install -ys gstreamer1.0-gtk3 						# GStreamer plugin for GTK+3
-        sudo apt-get install -ys gstreamer1.0-x								# GStreamer plugins for X11 and Pango
-        sudo apt-get install -ys gstreamer1.0-pulseaudio					# GStreamer plugin for PulseAudio
-        sudo apt-get install -ys gstreamer1.0-gl							# GStreamer plugins for GL
-        sudo apt-get install -ys gstreamer1.0-alsa							# GStreamer plugin for ALSA
-        sudo apt-get install -ys gstreamer1.0-doc 							# GStreamer documentation
-        sudo apt-get install -ys gstreamer1.0-tools						# GStreamer tools
+        sudo apt-get install -y libgstreamer1.0-0 							# GStreamer library
+        sudo apt-get install -y gstreamer1.0-plugins-base				# GStreamer plugins from the "base" set
+        sudo apt-get install -y gstreamer1.0-plugins-good				# GStreamer plugins from the "good" set
+        sudo apt-get install -y gstreamer1.0-plugins-bad		   		# GStreamer plugins from the "bad" set
+        sudo apt-get install -y gstreamer1.0-plugins-ugly				# GStreamer plugins from the "ugly" set
+        sudo apt-get install -y gstreamer1.0-libav							# libav plugin for GStreamer"
+        sudo apt-get install -y gstreamer1.0-gtk3 							# GStreamer plugin for GTK+3
+        sudo apt-get install -y gstreamer1.0-x								# GStreamer plugins for X11 and Pango
+        sudo apt-get install -y gstreamer1.0-pulseaudio					# GStreamer plugin for PulseAudio
+        sudo apt-get install -y gstreamer1.0-gl								# GStreamer plugins for GL
+        sudo apt-get install -y gstreamer1.0-alsa							# GStreamer plugin for ALSA
+        sudo apt-get install -y gstreamer1.0-doc 							# GStreamer documentation
+        sudo apt-get install -y gstreamer1.0-tools							# GStreamer tools
         echo ""
         clear
         echo ""    																	# clear Screen
         echo " Removeing the fluendo-mp3 codec for better MP3 play back"
         echo " sudo apt-get remove -y gstreamer1.0-fluendo-mp3"
-        sudo apt-get remove -ys gstreamer1.0-fluendo-mp3  				#removing fluendo-mp3
+        sudo apt-get remove -y gstreamer1.0-fluendo-mp3  				#removing fluendo-mp3
     else
         echo ""
         clear
@@ -453,8 +451,8 @@ funcDevTools () {
         clear
         echo ""
         echo "..installing Developer Tools..."
-        sudo apt-get install -ys anjuta arduino arduino-mk bluefish kicad
-        sudo apt-get install -ys fritzing fritzing-parts geany gnuradio
+        sudo apt-get install -y anjuta arduino arduino-mk bluefish kicad
+        sudo apt-get install -y fritzing fritzing-parts geany gnuradio
     else
         echo ""
         clear
@@ -472,7 +470,7 @@ funcSciEdu () {
         echo ""
         clear
         echo "..installing Educational and Science Applications..."
-        sudo apt-get install -ys stellarium
+        sudo apt-get install -y stellarium
     else
         echo ""
         clear
@@ -494,10 +492,10 @@ funcUtilities () {
         clear
         echo ""
         echo "..installing Utilities and System Tools..."
-		  sudo apt-get install -ys gcc make linux-headers-$(uname -r) dkms
-        sudo apt-get install -ys convertall gip keepassxc gnome-boxes gnome-nettool
-        sudo apt-get install -ys putty putty-tools redshift sirikali terminator tilda
-        sudo apt-get install -ys upnp-router-control virtualbox virtualbox-ext-pack
+		  sudo apt-get install -y gcc make linux-headers-$(uname -r) dkms
+        sudo apt-get install -y convertall gip keepassxc gnome-boxes gnome-nettool
+        sudo apt-get install -y putty putty-tools redshift sirikali terminator tilda
+        sudo apt-get install -y upnp-router-control virtualbox virtualbox-ext-pack
     else
         echo ""
         clear
@@ -524,11 +522,11 @@ funcMiscellaneous () {
         clear
         echo ""
         echo "..installing Miscellaneous Applications..."
-        sudo apt-get install -ys libavcodec-extra
-        sudo apt-get install -ys chirp clamav dropbox caja-dropbox nautilus-dropbox
-        sudo apt-get install -ys git git-core git-doc imagemagick gpa gparted grsync gufw
-        sudo apt-get install -ys imagemagick-common menulibre ntfs-3g ntfs-config openconnect
-        sudo apt-get install -ys rar unrar ttf-mscorefonts-installer unetbootin xrdp zip unzip
+        sudo apt-get install -y libavcodec-extra
+        sudo apt-get install -y chirp clamav dropbox caja-dropbox nautilus-dropbox
+        sudo apt-get install -y git git-core git-doc imagemagick gpa gparted grsync gufw
+        sudo apt-get install -y imagemagick-common menulibre ntfs-3g ntfs-config openconnect
+        sudo apt-get install -y rar unrar ttf-mscorefonts-installer unetbootin xrdp zip unzip
     else
         echo ""
         clear
@@ -569,7 +567,7 @@ funcEtcher () {
         # add the repository key
         sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 379CE192D401AB61
         sudo apt-get update
-        sudo apt-get install -ys etcher-electron
+        sudo apt-get install -y etcher-electron
     else
         echo ""
         clear
@@ -604,7 +602,7 @@ funcGoogleChrome () {
 		  # wget https://dl.google.com/linux/linux_signing_key.pub
 		  # sudo apt-key add linux_signing_key.pub
 		  # sudo apt update
-		  # sudo apt install -ys google-chrome-stable
+		  # sudo apt install -y google-chrome-stable
     fi
 sleep 2    
 }
@@ -628,7 +626,7 @@ funcPowerShell () {
         # Update the list of products
         sudo apt-get update
         # Install PowerShell
-        sudo apt-get install -ys powershell
+        sudo apt-get install -y powershell
         # Start PowerShell
         #pwsh
     else
@@ -663,9 +661,9 @@ funcSkype () {
 		  echo "deb [arch=amd64] https://repo.skype.com/deb stable main" | sudo tee /etc/apt/sources.list.d/skype-stable.list
 		  wget https://repo.skype.com/data/SKYPE-GPG-KEY
 		  sudo apt-key add SKYPE-GPG-KEY
-		  sudo apt install -ys apt-transport-https
+		  sudo apt install -y apt-transport-https
 		  sudo apt update
-		  sudo apt install -ys skypeforlinux
+		  sudo apt install -y skypeforlinux
 		  # skypeforlinux
     fi
 sleep 2    
@@ -749,7 +747,7 @@ funcTeamviewer () {
         sudo sh -c 'echo "deb http://linux.teamviewer.com/deb stable main" > /etc/apt/sources.list.d/teamviewer.list'
         sudo sh -c 'echo "deb http://linux.teamviewer.com/deb preview main" > /etc/apt/sources.list.d/teamviewer.list'
         sudo apt update
-        sudo apt install -ys teamviewer
+        sudo apt install -y teamviewer
         # teamviewer
     fi
 sleep 2
@@ -770,7 +768,7 @@ funcUNetbootin () {
         echo "..installing Unetbootin..."
         sudo add-apt-repository ppa:gezakovacs/ppa -y
         sudo apt-get update
-        sudo apt-get install -ys unetbootin 
+        sudo apt-get install -y unetbootin 
     else
         echo ""
         clear
@@ -821,11 +819,11 @@ funcVirtualBox () {
         echo ""
         echo "..installing VirtualBox..."
 		  sudo apt-get update
-		  sudo apt-get install -ys virtualbox virtualbox-ext-pack
+		  sudo apt-get install -y virtualbox virtualbox-ext-pack
 		  # Suggested packages:
 		  # VDE is a virtual switch that can connect multiple virtual machines together, both local and remote
 		  # VirtualBox Guest Additions ISO guest additions iso image for VirtualBox
-		  sudo apt-get install -ys vde2 virtualbox-guest-additions-iso
+		  sudo apt-get install -y vde2 virtualbox-guest-additions-iso
 		  sudo adduser $USERNAME vboxusers
     else
         echo ""
@@ -845,14 +843,14 @@ funcVirtualBox () {
 ## Update Sytem
 # sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove
 ## Install Required Linux Headers
-# sudo apt-get -ys install gcc make linux-headers-$(uname -r) dkms
+# sudo apt-get -y install gcc make linux-headers-$(uname -r) dkms
 ## Add VirtualBox Repository And Key
 # cd /tmp && wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 # cd /tmp && wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 # sudo sh -c 'echo "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" > /etc/apt/sources.list.d/virtualbox.list'
 ## Install VirtualBox
 # sudo apt-get update
-# sudo apt-get install -ys virtualbox-5.2
+# sudo apt-get install -y virtualbox-5.2
 ## VBoxManage -v 																			# verify if VirtualBox is installed
 # echo " Installing  VBoxManager ExtPack"        
 # curl -O http://download.virtualbox.org/virtualbox/5.2.0/Oracle_VM_VirtualBox_Extension_Pack-5.2.0-118431.vbox-extpack
@@ -892,7 +890,7 @@ funcMsVsCode () {
         curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
         sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
         sudo apt update
-        sudo apt -ys install code
+        sudo apt -y install code
     else
         echo ""
         clear
