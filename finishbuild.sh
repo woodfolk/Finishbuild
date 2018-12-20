@@ -3,8 +3,8 @@
 # Name:			finishbuild.sh
 # Author:		Romano Woodfolk
 # Created:		October 08, 2015 		(Original firstbuild.sh modified)
-# Modified:		November 21, 2018 	(110100100)
-# Version:		v1.0
+# Modified:		December 20, 2018 	(110100100)
+# Version:		v1.0.1
 #---------------------------------------------------------------------------------#
 # Comments: This script contains the installation commands for debian based and 
 # ubuntu based distributions i.e. Ubuntu (proper), Ubuntu-Mate, Xubuntu, Kubuntu, 
@@ -63,7 +63,7 @@ funcAreYouRoot () {
         echo "YOU ARE NOT root... This script REQUIRES root access"
         echo ""
         echo "You will be prompted to enter a your root password to proceed!!!"
-        #  exit 0
+        exit 0
     else
         echo ""
         clear																			# clear Screen
@@ -86,7 +86,7 @@ sleep 2
 funcUserInfo () {
  echo -e "Enter Your Name: \"i.e. First Last\" "
  read NAME
- echo -e "Enter usernam: "
+ echo -e "Enter username: "
  read USERNAME  
  echo -e ""
  clear
@@ -171,23 +171,23 @@ funcRepoCheck () {
 	# Enable All
 		#sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse partner"
 	# Enable main		
-		grep -Erh ^deb /etc/apt/sources.list | grep -qw main || 
+		grep -Erh ^deb /etc/apt/sources.list | grep -qw 'bionic main restricted' || 
 		sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main"
 	# Enable Universe		
-		grep -Erh ^deb /etc/apt/sources.list | grep -qw universe || 
+		grep -Erh ^deb /etc/apt/sources.list | grep -qw 'bionic universe' || 
 		sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"			 
 	# Enable restricted		
-		grep -Erh ^deb /etc/apt/sources.list | grep -qw restricted || 
+		grep -Erh ^deb /etc/apt/sources.list | grep -qw 'bionic restricted' || 
 		sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) restricted"
 	# Enable multiverse		
-		grep -Erh ^deb /etc/apt/sources.list | grep -qw multiverse || 
+		grep -Erh ^deb /etc/apt/sources.list | grep -qw 'bionic multiverse' || 
 		sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) multiverse"
 	# Enable partner		
 		grep -Erh ^deb /etc/apt/sources.list | grep -qw partner || 
 		sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 	# Enable backports		
 		grep -Erh ^deb /etc/apt/sources.list | grep -qw bionic-backports || 
-		sudo add-apt-repository -y "deb http://in.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse"
+		sudo add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse"
 }
 #---------------------------------------------------------------------------------#
 #	System Update/System Upgrade                                                   #
@@ -195,8 +195,8 @@ funcRepoCheck () {
 funcSysUpdates () {
 	# sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get autoremove
 	# sudo apt-get - f install
-	 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && 
-	 sudo apt-get autoremove -y && sudo apt-get -f install
+	 sudo apt-get update && sudo apt-get full-upgrade -y && sudo apt-get dist-upgrade -y && 
+	 sudo apt-get -f install -y && sudo apt-get autoremove
 	 echo ""
 	 clear
 	 echo ""
@@ -255,7 +255,7 @@ funcAudioVideo () {
         sudo apt-get install -y audacity cheese dvdrip easytag gtkpod handbrake kazam kino
         sudo apt-get install -y mplayer mplayer-gui mplayer-skins obs-studio openshot
         sudo apt-get install -y simplescreenrecorder smplayer smplayer-themes sound-juicer
-        sudo apt-get install -y xmms2-plugin-all libdvdcss2 libavcodec-extra
+        sudo apt-get install -y xmms2-plugin-all 
     else
         echo ""
         clear
@@ -300,7 +300,8 @@ funcCommNetwork () {
         echo "  ********* Removing the following packages *********"
         echo "    network-manager-gnome" 
         echo "    network-manager"
-		  sudo apt-get remove -y network-manager-gnome network-manager 
+		  echo "Don't forget to run apt-get remove -y network-manager-gnome network-manager" 
+		  # sudo apt-get remove -y network-manager-gnome network-manager 
     else
         echo ""
         clear
@@ -421,12 +422,15 @@ funcAddOns () {
         sudo apt-get install -y gstreamer1.0-plugins-ugly				# GStreamer plugins from the "ugly" set
         sudo apt-get install -y gstreamer1.0-libav							# libav plugin for GStreamer"
         sudo apt-get install -y gstreamer1.0-gtk3 							# GStreamer plugin for GTK+3
-        sudo apt-get install -y gstreamer1.0-x								# GStreamer plugins for X11 and Pango
+        sudo apt-get install -y gstreamer1.0-\x								# GStreamer plugins for X11 and Pango
         sudo apt-get install -y gstreamer1.0-pulseaudio					# GStreamer plugin for PulseAudio
         sudo apt-get install -y gstreamer1.0-gl								# GStreamer plugins for GL
         sudo apt-get install -y gstreamer1.0-alsa							# GStreamer plugin for ALSA
         sudo apt-get install -y gstreamer1.0-doc 							# GStreamer documentation
         sudo apt-get install -y gstreamer1.0-tools							# GStreamer tools
+        sudo apt-get install -y libavcodec-extra libavcodec-extra57  # Enable DVD And Copy-Right Videos Support
+        sudo apt-get install -y ubuntu-restricted-extras 				# Enable DVD And Copy-Right Videos Support
+        sudo apt-get install -y libdvdnav4 libdvdread4 libdvdcss2		# Enable DVD And Copy-Right Videos Support
         echo ""
         clear
         echo ""    																	# clear Screen
@@ -492,7 +496,7 @@ funcUtilities () {
         clear
         echo ""
         echo "..installing Utilities and System Tools..."
-		  sudo apt-get install -y gcc make linux-headers-$(uname -r) dkms
+		  sudo apt-get install -y \gcc \make linux-headers-$(uname -r) dkms
         sudo apt-get install -y convertall gip keepassxc gnome-boxes gnome-nettool
         sudo apt-get install -y putty putty-tools redshift sirikali terminator tilda
         sudo apt-get install -y upnp-router-control virtualbox virtualbox-ext-pack
@@ -526,7 +530,8 @@ funcMiscellaneous () {
         sudo apt-get install -y chirp clamav dropbox caja-dropbox nautilus-dropbox
         sudo apt-get install -y git git-core git-doc imagemagick gpa gparted grsync gufw
         sudo apt-get install -y imagemagick-common menulibre ntfs-3g ntfs-config openconnect
-        sudo apt-get install -y rar unrar ttf-mscorefonts-installer unetbootin xrdp zip unzip
+        sudo apt-get install -y network-manager-openconnect network-manager-openconnect-gnome
+        sudo apt-get install -y rar unrar ttf-mscorefonts-installer unetbootin xrdp \zip \unzip
     else
         echo ""
         clear
@@ -1425,6 +1430,9 @@ echo "  NTFS Configuration Tool - allow you to easily configure all of your NTFS
 echo "   allow write support via a friendly gui"
 echo "  OpenConnect - VPN client that utilizes TLS and DTLS for secure session establishment "
 echo "    and is compatible with the CISCO AnyConnect SSL VPN protocol"
+echo ""
+echo ""
+
 echo " PowerShell - an automation and configuration management platform. It consists of a "
 echo "   cross-platform (Windows, Linux, and macOS) command-line shell and associated "
 echo "   scripting language"
